@@ -1,0 +1,210 @@
+:root {
+    --color-primary: #0c1b33;
+    --color-secondary: #7a306c;
+    --color-tertiary: #03b5aa;
+    --color-text: #0c1b33;
+    --color-white: #FFFFFF;
+}
+
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    height: 100vh;
+    background: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+/* Sección de entrada */
+.input-section {
+    font-family: "Inter", sans-serif;
+    flex: 60%;
+    background: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 3rem 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--color-tertiary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botones */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    gap: .3%;
+}
+
+.input-name {
+    width: 80%;
+    padding: 3%;
+    border: 1px solid var(--color-primary);
+    border-radius: 25px 0 0 25px;
+    font-size: 100%;
+}
+
+.button-container {
+    width: 300px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Botones */
+button {
+    padding: .725rem 1.725rem;
+    font-size: 100%;
+    border: 1px solid var(--color-primary);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border-color: var(--color-tertiary);
+}
+
+.button-draw {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    color: var(--color-white);
+    background: var(--color-primary);
+    gap: .5rem;
+}
+
+.button-draw:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border-color: var(--color-tertiary);
+}
+
+/* Listas */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+}
+
+.result-list {
+    margin: 1rem 0;
+    color: #dbfe87;
+    font-weight: bold;
+    text-align: center;
+}
+
+li {
+    display: flex;
+    gap: .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: center;
+    background: #b2aa8e;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+}
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    background: var(--color-tertiary);
+    color: var(--color-white);
+    padding: 2%;
+    border-radius: 0 0 3rem 3rem;
+    text-align: center;
+}
+
+.button-eliminar {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.button-eliminar img {
+    width: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 816px) {
+    body {
+        padding: 0 4%;
+        width: 100%;
+    }
+    .header-banner {
+        position: relative;
+        padding-top: 5%;
+    }
+    .header-banner img {
+        width: 100%;
+        height: auto;
+    }
+    .header-banner h1 {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-primary);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
